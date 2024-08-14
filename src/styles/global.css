@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #2a2a2a;
+    --text-color: #ffffff;
+    --accent-color: #61dafb;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  
+  .coin-list {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+  
+  .coin-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .coin-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .coin-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .coin-info {
+    flex-grow: 1;
+  }
+  
+  .coin-info h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .coin-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .positive {
+    color: #4caf50;
+  }
+  
+  .negative {
+    color: #f44336;
+  }
+  
+  .coin-details {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .chart {
+    margin-top: 20px;
+  }
+  
+  .converter {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .converter input,
+  .converter select {
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+    }
+  }
+  
